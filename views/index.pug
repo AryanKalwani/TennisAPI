@@ -1,0 +1,24 @@
+doctype=html
+html
+    head
+        title Tennis_API
+    body
+        div Player 1 Current Game Score: #{player1Score} points
+        div Player 2 Current Game Score: #{player2Score} points
+        br
+        form(method='POST', action='/increaseScore/player1')
+            button PLAYER 1's POINT
+        form(method='POST', action='/increaseScore/player2')
+            button PLAYER 2's POINT
+        div Player 1 Sets Won: #{player1SetScore}
+        div Player 2 Sets Won: #{player2SetScore}
+        br
+        div Player 1 Matches Won: #{player1MatchScore}
+        div Player 2 Matches Won: #{player2MatchScore}
+        br
+        div Complete Match Winner: #{winner}
+        br
+        form(method='POST', action='/reset')
+            button RESET
+        div #{completedMsg}
+        
